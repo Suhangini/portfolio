@@ -19,9 +19,11 @@ document.querySelectorAll("nav a").forEach(link => {
     }
 
     // Close mobile menu after clicking a link
-    document
-      .getElementById("nav-menu")
-      .classList.remove("active");
+    const navMenu = document.getElementById("nav-menu");
+
+    if (navMenu) {
+      navMenu.classList.remove("active");
+    }
 
   });
 
@@ -39,8 +41,12 @@ const navMenu =
   document.getElementById("nav-menu");
 
 
-menuToggle.addEventListener("click", () => {
+if (menuToggle && navMenu) {
 
-  navMenu.classList.toggle("active");
+  menuToggle.addEventListener("click", () => {
 
-});
+    navMenu.classList.toggle("active");
+
+  });
+
+}
