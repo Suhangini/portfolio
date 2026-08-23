@@ -1,167 +1,384 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suhangini's Portfolio</title>
+
+  <title>Suhangini Umredkar | AI & Data Science</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Suhangini Umredkar, a final-year Artificial Intelligence and Data Science student."
+  />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- Navbar -->
+  <!-- ================= NAVBAR ================= -->
   <header class="navbar">
+
     <h2 class="logo">Suhangini Umredkar</h2>
-    <nav>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <nav id="nav-menu">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </header>
 
-  <!-- Hero Section -->
+
+  <!-- ================= HERO ================= -->
   <section class="hero">
-    <img src="assets/images/profile.jpg"
-         alt="Suhangini Umredkar"
-         class="profile-img">
-  
-    <h1>Hello, I'm <span>Suhangini Umredkar</span></h1>
-  
+
+    <img
+      src="assets/images/profile.jpg"
+      alt="Suhangini Umredkar"
+      class="profile-img"
+    />
+
+    <h1>
+      Hello, I'm
+      <span>Suhangini Umredkar</span>
+    </h1>
+
     <p>
-      3rd-Year Artificial Intelligence & Data Science Student | <br>
-      Data Analyst Intern at ARTPARK | <br>
-      Python • SQL • Web Development <br>
+      Final-Year Artificial Intelligence & Data Science Student<br />
+      AI/ML • Python • Data • Web Development
     </p>
-  
-    <a href="assets/resume/Suhangini_Umredkar_Resume.pdf"
-       class="btn"
-       target="_blank">
-      View Resume
-    </a>
-  </section>
-  
-  
 
+    <div class="hero-buttons">
 
-  <!-- About -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I am a third-year B.Tech student in Artificial Intelligence and Data Science,
-        currently working as an Intern at ARTPARK. I have hands-on experience in AI and
-        web-based projects and work with Python, basic machine learning concepts, and
-        web development technologies. I enjoy building real-world applications,
-        continuously learning new skills, and applying my technical knowledge to
-        practical problems.
-      </p>
-      
-      
-  </section>
+      <a
+        href="assets/resume/Suhangini_Umredkar_Resume.pdf"
+        class="btn"
+        target="_blank"
+      >
+        View Resume
+      </a>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>Python</span>
-  <span>HTML</span>
-  <span>CSS</span>
-  <span>JavaScript</span>
-  <span>SQL</span>
-  <span>Basic Machine Learning</span>
-  <span>Data Handling & Validation</span>
-  <span>Backend Basics</span>
+      <a
+        href="https://github.com/Suhangini"
+        class="btn btn-outline"
+        target="_blank"
+      >
+        GitHub
+      </a>
+
     </div>
+
   </section>
 
-  <!-- Projects -->
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section">
+
+    <h2>About Me</h2>
+
+    <p>
+      I am a final-year B.Tech student specializing in Artificial Intelligence
+      and Data Science, with a strong interest in Artificial Intelligence,
+      Machine Learning, data-driven applications, and web development.
+      I enjoy turning ideas into practical applications and working on
+      projects that combine intelligent systems with user-friendly interfaces.
+    </p>
+
+    <p>
+      Through academic projects, internships, and hands-on development,
+      I have gained experience working with Python, SQL, machine learning,
+      web technologies, APIs, and data processing. I am continuously
+      exploring new technologies and improving my ability to build
+      real-world AI-based solutions.
+    </p>
+
+  </section>
+
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="section">
+
+    <h2>Skills</h2>
+
+    <div class="skills">
+
+      <span>Python</span>
+      <span>SQL</span>
+      <span>Machine Learning</span>
+      <span>Deep Learning</span>
+
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>React</span>
+
+      <span>FastAPI</span>
+      <span>REST APIs</span>
+      <span>MongoDB</span>
+
+      <span>Data Analysis</span>
+      <span>Data Handling & Visualization</span>
+
+      <span>Git & GitHub</span>
+      <span>Power BI</span>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PROJECTS ================= -->
   <section id="projects" class="section">
+
     <h2>Projects</h2>
 
-    <div class="card">
-        <h3>AI-Powered Tic Tac Toe Game</h3>
-        <p>
-          Developed a Tic Tac Toe game with an AI opponent using the Minimax algorithm.
-          Implemented multiple difficulty levels and a Tkinter-based GUI to simulate
-          intelligent gameplay.
-        </p>
-        <p><strong>Tech:</strong> Python, Tkinter, Minimax Algorithm</p>
-        <a href="https://github.com/Suhangini/Tic-Tac-Toe-AI" target="_blank">GitHub</a>
-      </div>
-      
+    <div class="projects">
 
-      <div class="card">
-        <h3>Rule-Based Chatbot</h3>
-        <p>
-          Built a rule-based chatbot using Python that responds to user input through
-          keyword-based logic, simulating basic conversational behavior.
-        </p>
-        <p><strong>Tech:</strong> Python</p>
-        <a href="https://github.com/Suhangini/Rule-Based-AI" target="_blank">GitHub</a>
-      </div>
-      
 
-      <div class="card">
-        <h3>Image Caption Recommendation System</h3>
+      <!-- PawSense -->
+      <div class="card featured-project">
+
+        <div class="project-badge">Final Year Project</div>
+
+        <h3>PawSense – AI-Powered Pet Healthcare</h3>
+
         <p>
-          Implemented an image captioning system using the BLIP model on Google Colab
+          Developing an AI-powered pet healthcare platform designed to assist
+          pet owners with intelligent health-related insights. The system
+          combines AI-based pet analysis, health information, and an
+          easy-to-use web interface.
+        </p>
+
+        <p>
+          <strong>Tech:</strong>
+          React, FastAPI, Python, MongoDB, Machine Learning,
+          Deep Learning
+        </p>
+
+      </div>
+
+
+      <!-- Cinematics -->
+      <div class="card">
+
+        <h3>Cinematics – AI-Based Movie Success Prediction</h3>
+
+        <p>
+          An AI-based project designed to predict the potential success of
+          movies by analyzing factors such as director history, cast
+          characteristics, and other relevant movie attributes.
+        </p>
+
+        <p>
+          <strong>Tech:</strong>
+          Python, Machine Learning, Data Analysis
+        </p>
+
+      </div>
+
+
+      <!-- Tic Tac Toe -->
+      <div class="card">
+
+        <h3>AI-Powered Tic Tac Toe</h3>
+
+        <p>
+          Developed a Tic Tac Toe game with an AI opponent using the
+          Minimax algorithm. The project includes a graphical interface
+          and intelligent gameplay.
+        </p>
+
+        <p>
+          <strong>Tech:</strong>
+          Python, Tkinter, Minimax Algorithm
+        </p>
+
+        <a
+          href="https://github.com/Suhangini/Tic-Tac-Toe-AI"
+          target="_blank"
+        >
+          View on GitHub →
+        </a>
+
+      </div>
+
+
+      <!-- Image Captioning -->
+      <div class="card">
+
+        <h3>Image Captioning System</h3>
+
+        <p>
+          Implemented an image captioning system using the BLIP model
           to automatically generate descriptive captions for images.
         </p>
-        <p><strong>Tech:</strong> Python, BLIP Model, Google Colab</p>
-        <a href="https://github.com/Suhangini/Image-Captioning" target="_blank">GitHub</a>
-      </div>
 
-      <div class="card">
-        <h3>Image Organization & Compression Script</h3>
         <p>
-          Developed a Python-based script to organize, rename, and compress medical image
-          datasets. The script processes nested patient and scan folders, compresses JPEG
-          images, and generates a structured JSON summary with processing details.
+          <strong>Tech:</strong>
+          Python, BLIP, Google Colab
         </p>
-        <p><strong>Tech:</strong> Python, Pillow (PIL), JSON, argparse</p>
-        <a href="https://github.com/Suhangini/technical-assignment-image-organizer" target="_blank">
-          GitHub
+
+        <a
+          href="https://github.com/Suhangini/Image-Captioning"
+          target="_blank"
+        >
+          View on GitHub →
         </a>
+
       </div>
-      
-      
+
+
+      <!-- Image Organizer -->
+      <div class="card">
+
+        <h3>Image Organization & Compression Tool</h3>
+
+        <p>
+          Developed a Python-based tool to organize, rename, and compress
+          image datasets while generating structured processing summaries.
+        </p>
+
+        <p>
+          <strong>Tech:</strong>
+          Python, Pillow, JSON, argparse
+        </p>
+
+        <a
+          href="https://github.com/Suhangini/technical-assignment-image-organizer"
+          target="_blank"
+        >
+          View on GitHub →
+        </a>
+
+      </div>
+
+
+      <!-- Chatbot -->
+      <div class="card">
+
+        <h3>Rule-Based Chatbot</h3>
+
+        <p>
+          Built a Python chatbot using keyword-based logic to respond
+          to user inputs and simulate basic conversational behaviour.
+        </p>
+
+        <p>
+          <strong>Tech:</strong>
+          Python
+        </p>
+
+        <a
+          href="https://github.com/Suhangini/Rule-Based-AI"
+          target="_blank"
+        >
+          View on GitHub →
+        </a>
+
+      </div>
+
+
     </div>
+
   </section>
 
-  <!-- Experience -->
+
+  <!-- ================= EXPERIENCE ================= -->
   <section id="experience" class="section">
-    <h2>Internship Experience</h2>
+
+    <h2>Experience</h2>
+
     <div class="card">
-        <h3>Intern – ARTPARK</h3>
-        <p><strong>Duration:</strong> November 2025 – Present</p>
 
-        <ul>
-            <li>Worked under the MIDAS project to support data analysis activities.</li>
-            <li>Coordinated with stakeholders from different hospitals to understand data requirements and issues.</li>
-            <li>Assisted in preparing, organizing, and correcting datasets to support accurate data analysis.</li>
-            <li>Collaborated with team members to ensure smooth data-related workflows.</li>
-          </ul>
-      
-      
+      <h3>Data Manipulator Intern – ARTPARK</h3>
+
+      <p>
+        <strong>2025 – 2026</strong>
+      </p>
+
+      <ul>
+
+        <li>
+          Worked on data-related activities supporting the MIDAS project.
+        </li>
+
+        <li>
+          Assisted in organizing, preparing, and correcting datasets
+          for analysis.
+        </li>
+
+        <li>
+          Coordinated with stakeholders to understand data requirements
+          and resolve data-related issues.
+        </li>
+
+        <li>
+          Collaborated with team members to maintain accurate and
+          efficient data workflows.
+        </li>
+
+      </ul>
+
     </div>
+
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: suhangini.umredkar@gmail.com</p>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section contact">
+
+    <h2>Let's Connect</h2>
+
     <p>
-      <a href="https://www.linkedin.com/in/suhangini-umredkar-23b26032a" target="blank">LinkedIn</a> |
-      <a href="https://github.com/Suhangini" target="blank">GitHub</a>
+      Interested in AI, data, and building practical technology.
+      Feel free to connect with me!
     </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:suhangini.umredkar@gmail.com">
+        Email
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/suhangini-umredkar-23b26032a"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://github.com/Suhangini"
+        target="_blank"
+      >
+        GitHub
+      </a>
+
+    </div>
+
   </section>
 
+
+  <!-- ================= FOOTER ================= -->
   <footer>
-    <p>© 2026 Suhangini</p>
+
+    <p>
+      © 2026 Suhangini Umredkar
+    </p>
+
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
-
-<!-- redeploy -->
+```
