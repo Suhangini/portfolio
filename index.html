@@ -1,358 +1,1427 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Suhangini Umredkar | AI & Data Science</title>
 
   <meta
     name="description"
-    content="Portfolio of Suhangini Umredkar, a final-year Artificial Intelligence and Data Science student."
-  />
+    content="Suhangini Umredkar — Final-year Artificial Intelligence & Data Science student exploring AI, Machine Learning, Data Analytics and technology."
+  >
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-  <!-- ================= NAVBAR ================= -->
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
   <header class="navbar">
 
-    <h2 class="logo">Suhangini Umredkar</h2>
+    <div class="nav-container">
 
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      ☰
-    </button>
+      <a href="#home" class="logo">
+        SU<span>.</span>
+      </a>
 
-    <nav id="nav-menu">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav id="navMenu">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+      </nav>
+
+      <div class="nav-actions">
+
+        <a
+          href="https://www.linkedin.com/in/suhangini-umredkar-23b26032a"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a
+          href="https://github.com/Suhangini"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+      </div>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
 
   </header>
 
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
+  <main>
 
-    <img
-      src="assets/images/profile.jpg"
-      alt="Suhangini Umredkar"
-      class="profile-img"
-    />
+    <!-- =========================
+         HERO
+    ========================== -->
 
-    <h1>
-      Hello, I'm
-      <span>Suhangini Umredkar</span>
-    </h1>
+    <section class="hero" id="home">
 
-    <p>
-      Final-Year Artificial Intelligence & Data Science Student<br />
-      AI/ML • Python • Data • Web Development
-    </p>
+      <div class="technical-grid"></div>
 
-    <div class="hero-buttons">
+      <div class="hero-orb orb-blue"></div>
+      <div class="hero-orb orb-peach"></div>
 
-      <a
-        href="assets/resume/Suhangini_Umredkar_Resume.pdf"
-        class="btn"
-        target="_blank"
-      >
-        View Resume
-      </a>
+      <!-- Decorative data points -->
 
-      <a
-        href="https://github.com/Suhangini"
-        class="btn btn-outline"
-        target="_blank"
-      >
-        GitHub
-      </a>
-
-    </div>
-
-  </section>
+      <div class="data-node node-one"></div>
+      <div class="data-node node-two"></div>
+      <div class="data-node node-three"></div>
+      <div class="data-node node-four"></div>
 
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about" class="section">
-
-    <h2>About Me</h2>
-
-    <p>
-      I am a final-year B.Tech student specializing in Artificial Intelligence
-      and Data Science, with a strong interest in Artificial Intelligence,
-      Machine Learning, data-driven applications, and web development.
-      I enjoy turning ideas into practical applications and working on
-      projects that combine intelligent systems with user-friendly interfaces.
-    </p>
-
-    <p>
-      Through academic projects, internships, and hands-on development,
-      I have gained experience working with Python, SQL, machine learning,
-      web technologies, APIs, and data processing. I am continuously
-      exploring new technologies and improving my ability to build
-      real-world AI-based solutions.
-    </p>
-
-  </section>
+      <div class="hero-container">
 
 
-  <!-- ================= SKILLS ================= -->
-  <section id="skills" class="section">
+        <!-- HERO TEXT -->
 
-    <h2>Skills</h2>
+        <div class="hero-text reveal">
 
-    <div class="skills">
+          <div class="status-pill">
 
-      <span>Python</span>
-      <span>SQL</span>
-      <span>Machine Learning</span>
-      <span>Deep Learning</span>
+            <span class="status-dot"></span>
 
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>React</span>
+            FINAL YEAR · AI & DATA SCIENCE
 
-      <span>FastAPI</span>
-      <span>REST APIs</span>
-      <span>MongoDB</span>
-
-      <span>Data Analysis</span>
-      <span>Data Handling & Visualization</span>
-
-      <span>Git & GitHub</span>
-      <span>Power BI</span>
-
-    </div>
-
-  </section>
+          </div>
 
 
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects" class="section">
-
-    <h2>Projects</h2>
-
-    <div class="projects">
+          <p class="hero-intro">
+            Hello, I'm
+          </p>
 
 
-      <!-- PawSense -->
-      <div class="card featured-project">
-
-        <div class="project-badge">Final Year Project • In Progress</div>
-
-        <h3>PawSense – AI powered Companion animal health-care platform</h3>
-
-        <p>
-          Developing an AI-powered pet healthcare platform designed to assist
-          pet owners with intelligent health-related insights. The system
-          combines AI-based pet analysis, health information, and an
-          easy-to-use web interface.
-        </p>
-
-        <p>
-          <strong>Tech:</strong>
-          React, FastAPI, Python, MongoDB, Machine Learning,
-          Deep Learning
-        </p>
-
-      </div>
+          <h1>
+            Suhangini
+            <span>Umredkar</span>
+          </h1>
 
 
-      <!-- Tic Tac Toe -->
-      <div class="card">
-
-        <h3>AI-Powered Tic Tac Toe</h3>
-
-        <p>
-          Developed a Tic Tac Toe game with an AI opponent using the
-          Minimax algorithm. The project includes a graphical interface
-          and intelligent gameplay.
-        </p>
-
-        <p>
-          <strong>Tech:</strong>
-          Python, Tkinter, Minimax Algorithm
-        </p>
-
-        <a
-          href="https://github.com/Suhangini/Tic-Tac-Toe-AI"
-          target="_blank"
-        >
-          View on GitHub →
-        </a>
-
-      </div>
+          <h2>
+            Artificial Intelligence
+            <span>&</span>
+            Data Science Student
+          </h2>
 
 
-      <!-- Image Captioning -->
-      <div class="card">
+          <p class="hero-description">
 
-        <h3>Image Captioning System</h3>
+            Exploring intelligent systems, data-driven solutions,
+            and modern technology through hands-on projects,
+            experimentation, and continuous learning.
 
-        <p>
-          Implemented an image captioning system using the BLIP model
-          to automatically generate descriptive captions for images.
-        </p>
-
-        <p>
-          <strong>Tech:</strong>
-          Python, BLIP, Google Colab
-        </p>
-
-        <a
-          href="https://github.com/Suhangini/Image-Captioning"
-          target="_blank"
-        >
-          View on GitHub →
-        </a>
-
-      </div>
+          </p>
 
 
-      <!-- Image Organizer -->
-      <div class="card">
+          <div class="hero-buttons">
 
-        <h3>Image Organization & Compression Tool</h3>
+            <a
+              href="assets/resume/Suhangini_Umredkar_Resume.pdf"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              <i class="fa-regular fa-file-lines"></i>
+              View Resume
+            </a>
 
-        <p>
-          Developed a Python-based tool to organize, rename, and compress
-          image datasets while generating structured processing summaries.
-        </p>
+            <a
+              href="https://github.com/Suhangini"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
 
-        <p>
-          <strong>Tech:</strong>
-          Python, Pillow, JSON, argparse
-        </p>
+            <a
+              href="https://www.linkedin.com/in/suhangini-umredkar-23b26032a"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+              LinkedIn
+            </a>
 
-        <a
-          href="https://github.com/Suhangini/technical-assignment-image-organizer"
-          target="_blank"
-        >
-          View on GitHub →
-        </a>
-
-      </div>
+          </div>
 
 
-      <!-- Chatbot -->
-      <div class="card">
+          <div class="hero-stack">
 
-        <h3>Rule-Based Chatbot</h3>
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
+            <span>React</span>
+            <span>FastAPI</span>
 
-        <p>
-          Built a Python chatbot using keyword-based logic to respond
-          to user inputs and simulate basic conversational behaviour.
-        </p>
+          </div>
 
-        <p>
-          <strong>Tech:</strong>
-          Python
-        </p>
+        </div>
 
-        <a
-          href="https://github.com/Suhangini/Rule-Based-AI"
-          target="_blank"
-        >
-          View on GitHub →
-        </a>
+
+        <!-- PROFILE -->
+
+        <div class="hero-profile reveal">
+
+          <div class="profile-glow"></div>
+
+          <div class="profile-card">
+
+
+            <div class="profile-header">
+
+              <div class="window-dots">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+              </div>
+
+              <span class="profile-code">
+                AI / DS
+              </span>
+
+            </div>
+
+
+            <div class="profile-image">
+
+              <img
+                src="assets/images/profile.jpeg"
+                alt="Suhangini Umredkar"
+              >
+
+            </div>
+
+
+            <div class="profile-bottom">
+
+              <div>
+
+                <span class="profile-label">
+                  CURRENT FOCUS
+                </span>
+
+                <strong>
+                  AI & Data Science
+                </strong>
+
+              </div>
+
+              <span class="graduation">
+                '27
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Floating cards -->
+
+          <div class="floating-card floating-ai">
+
+            <div class="floating-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div>
+
+              <span>
+                Exploring
+              </span>
+
+              <strong>
+                AI / ML
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="floating-card floating-data">
+
+            <div class="floating-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+
+              <span>
+                Working with
+              </span>
+
+              <strong>
+                Data
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
 
-    </div>
+      <div class="scroll-indicator">
 
-  </section>
+        <span>
+          Scroll to explore
+        </span>
 
+        <i class="fa-solid fa-arrow-down"></i>
 
-  <!-- ================= EXPERIENCE ================= -->
-  <section id="experience" class="section">
+      </div>
 
-    <h2>Experience</h2>
-
-    <div class="card">
-
-      <h3>Data Manipulator Intern – ARTPARK</h3>
-
-      <p>
-        <strong>November 2025 - May 2026</strong>
-      </p>
-
-      <ul>
-
-        <li>
-          Worked on data-related activities supporting the MIDAS project.
-        </li>
-
-        <li>
-          Assisted in organizing, preparing, and correcting datasets
-          for analysis.
-        </li>
-
-        <li>
-          Coordinated with stakeholders to understand data requirements
-          and resolve data-related issues.
-        </li>
-
-        <li>
-          Collaborated with team members to maintain accurate and
-          efficient data workflows.
-        </li>
-
-      </ul>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact" class="section contact">
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-    <h2>Let's Connect</h2>
+    <section class="section" id="about">
 
-    <p>
-      Interested in AI, data, and building practical technology.
-      Feel free to connect with me!
-    </p>
+      <div class="section-heading reveal">
 
-    <div class="contact-links">
+        <span class="section-kicker">
+          GET TO KNOW ME
+        </span>
 
-      <a href="mailto:suhanginiumredkar@gmail.com">
-        Email
-      </a>
+        <h2>
+          About Me
+        </h2>
 
-      <a
-        href="https://www.linkedin.com/in/suhangini-umredkar-23b26032a"
-        target="_blank"
-      >
-        LinkedIn
-      </a>
-
-      <a
-        href="https://github.com/Suhangini"
-        target="_blank"
-      >
-        GitHub
-      </a>
-
-    </div>
-
-  </section>
+      </div>
 
 
-  <!-- ================= FOOTER ================= -->
+      <div class="about-layout">
+
+
+        <div class="about-content reveal">
+
+          <div class="about-accent"></div>
+
+          <p class="about-lead">
+
+            I am a final-year B.Tech student specializing in
+            <strong>Artificial Intelligence & Data Science</strong>,
+            with a curiosity for understanding how technology
+            can turn ideas and data into useful solutions.
+
+          </p>
+
+
+          <p>
+
+            My interests span Artificial Intelligence,
+            Machine Learning, Deep Learning, Data Analytics,
+            and Web Development. I enjoy experimenting with
+            new technologies and building projects that combine
+            intelligent systems with practical interfaces.
+
+          </p>
+
+
+          <p>
+
+            Through academic projects, hands-on development,
+            and internship experience, I have worked with
+            Python, SQL, APIs, data processing, machine learning
+            workflows, and modern web technologies.
+
+          </p>
+
+        </div>
+
+
+        <div class="about-side reveal">
+
+
+          <div class="interest-card">
+
+            <div class="interest-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div>
+
+              <h3>
+                Artificial Intelligence
+              </h3>
+
+              <p>
+                Learning and experimenting with
+                intelligent systems and ML models.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="interest-card">
+
+            <div class="interest-icon">
+              <i class="fa-solid fa-database"></i>
+            </div>
+
+            <div>
+
+              <h3>
+                Data & Analytics
+              </h3>
+
+              <p>
+                Exploring patterns, visualizing data,
+                and finding meaningful insights.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="interest-card">
+
+            <div class="interest-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+
+            <div>
+
+              <h3>
+                Development
+              </h3>
+
+              <p>
+                Turning ideas into functional,
+                user-friendly applications.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section class="section education-section" id="education">
+
+      <div class="section-heading reveal">
+
+        <span class="section-kicker">
+          ACADEMIC JOURNEY
+        </span>
+
+        <h2>
+          Education
+        </h2>
+
+      </div>
+
+
+      <div class="education-card reveal">
+
+        <div class="education-icon">
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+        </div>
+
+
+        <div class="education-content">
+
+          <div class="education-top">
+
+            <span>
+              CURRENTLY PURSUING
+            </span>
+
+            <strong>
+              2027
+            </strong>
+
+          </div>
+
+
+          <h3>
+            B.Tech in Artificial Intelligence
+            & Data Science
+          </h3>
+
+
+          <h4>
+            Priyadarshini College of Engineering
+          </h4>
+
+
+          <p>
+            Affiliated to RTM Nagpur University
+          </p>
+
+
+          <div class="education-tags">
+
+            <span>
+              <i class="fa-solid fa-layer-group"></i>
+              4th Year
+            </span>
+
+            <span>
+              <i class="fa-solid fa-book-open"></i>
+              7th Semester
+            </span>
+
+            <span>
+              <i class="fa-solid fa-calendar-check"></i>
+              Graduation · 2027
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section class="section" id="skills">
+
+      <div class="section-heading reveal">
+
+        <span class="section-kicker">
+          WHAT I WORK WITH
+        </span>
+
+        <h2>
+          Skills
+        </h2>
+
+      </div>
+
+
+      <div class="skills-grid">
+
+
+        <!-- Programming -->
+
+        <div class="skill-card reveal">
+
+          <div class="skill-top">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+
+            <span>
+              01
+            </span>
+
+          </div>
+
+
+          <h3>
+            Programming
+          </h3>
+
+
+          <p>
+            Programming languages used across
+            academic and personal projects.
+          </p>
+
+
+          <div class="skill-tags">
+
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Java</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- AI -->
+
+        <div class="skill-card reveal">
+
+          <div class="skill-top">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <span>
+              02
+            </span>
+
+          </div>
+
+
+          <h3>
+            AI & Machine Learning
+          </h3>
+
+
+          <p>
+            Exploring intelligent systems through
+            machine learning and deep learning.
+          </p>
+
+
+          <div class="skill-tags">
+
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
+            <span>TensorFlow</span>
+            <span>Keras</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Data -->
+
+        <div class="skill-card reveal">
+
+          <div class="skill-top">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+
+            <span>
+              03
+            </span>
+
+          </div>
+
+
+          <h3>
+            Data & Analytics
+          </h3>
+
+
+          <p>
+            Working with datasets, visualization,
+            analysis, and data-driven workflows.
+          </p>
+
+
+          <div class="skill-tags">
+
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Power BI</span>
+            <span>Data Analysis</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Development -->
+
+        <div class="skill-card reveal">
+
+          <div class="skill-top">
+
+            <div class="skill-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+
+            <span>
+              04
+            </span>
+
+          </div>
+
+
+          <h3>
+            Web Development
+          </h3>
+
+
+          <p>
+            Building responsive interfaces and
+            backend APIs for practical applications.
+          </p>
+
+
+          <div class="skill-tags">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>FastAPI</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Technology stack -->
+
+      <div class="technology-panel reveal">
+
+        <div class="technology-header">
+
+          <div>
+
+            <span>
+              TECHNOLOGY STACK
+            </span>
+
+            <h3>
+              Tools & Technologies
+            </h3>
+
+          </div>
+
+          <i class="fa-solid fa-code"></i>
+
+        </div>
+
+
+        <div class="technology-list">
+
+          <span>
+            <i class="fa-brands fa-python"></i>
+            Python
+          </span>
+
+          <span>
+            SQL
+          </span>
+
+          <span>
+            Machine Learning
+          </span>
+
+          <span>
+            Deep Learning
+          </span>
+
+          <span>
+            TensorFlow
+          </span>
+
+          <span>
+            Keras
+          </span>
+
+          <span>
+            React
+          </span>
+
+          <span>
+            FastAPI
+          </span>
+
+          <span>
+            MongoDB
+          </span>
+
+          <span>
+            REST APIs
+          </span>
+
+          <span>
+            Power BI
+          </span>
+
+          <span>
+            Git & GitHub
+          </span>
+
+          <span>
+            VS Code
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section class="section experience-section" id="experience">
+
+      <div class="section-heading reveal">
+
+        <span class="section-kicker">
+          PROFESSIONAL EXPERIENCE
+        </span>
+
+        <h2>
+          Experience
+        </h2>
+
+      </div>
+
+
+      <div class="experience-card reveal">
+
+
+        <div class="experience-side">
+
+          <div class="experience-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+
+          <span>
+            2025 — 2026
+          </span>
+
+        </div>
+
+
+        <div class="experience-content">
+
+          <div class="experience-header">
+
+            <div>
+
+              <span class="experience-label">
+                INTERNSHIP
+              </span>
+
+              <h3>
+                Data Manipulator Intern
+              </h3>
+
+              <h4>
+                ARTPARK
+              </h4>
+
+            </div>
+
+            <span class="experience-date">
+              Nov 2025 — May 2026
+            </span>
+
+          </div>
+
+
+          <p class="experience-intro">
+
+            Worked on data-related activities supporting
+            the MIDAS project and contributed to maintaining
+            accurate and organized data workflows.
+
+          </p>
+
+
+          <ul>
+
+            <li>
+              Worked on data-related activities supporting
+              the MIDAS project.
+            </li>
+
+            <li>
+              Assisted in organizing, preparing, and correcting
+              datasets for analysis.
+            </li>
+
+            <li>
+              Coordinated with stakeholders to understand
+              data requirements and resolve data-related issues.
+            </li>
+
+            <li>
+              Collaborated with team members to maintain
+              accurate and efficient data workflows.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section class="section projects-section" id="projects">
+
+      <div class="section-heading reveal">
+
+        <span class="section-kicker">
+          SELECTED WORK
+        </span>
+
+        <h2>
+          Projects
+        </h2>
+
+      </div>
+
+
+      <div class="projects-grid">
+
+
+        <!-- PAWSENSE -->
+
+        <article class="project-card featured reveal">
+
+          <div class="project-number">
+            01
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-header">
+
+              <div>
+
+                <span class="project-category">
+                  FINAL YEAR PROJECT · IN PROGRESS
+                </span>
+
+                <h3>
+                  PawSense
+                </h3>
+
+              </div>
+
+              <div class="project-icon">
+                <i class="fa-solid fa-paw"></i>
+              </div>
+
+            </div>
+
+
+            <p>
+
+              An AI-powered companion animal healthcare
+              platform designed to assist pet owners with
+              intelligent health-related insights and
+              practical pet-care tools.
+
+            </p>
+
+
+            <div class="project-highlights">
+
+              <span>
+                <i class="fa-solid fa-check"></i>
+                AI-based pet analysis
+              </span>
+
+              <span>
+                <i class="fa-solid fa-check"></i>
+                Health information
+              </span>
+
+              <span>
+                <i class="fa-solid fa-check"></i>
+                Web application
+              </span>
+
+            </div>
+
+
+            <div class="project-bottom">
+
+              <div class="project-tags">
+
+                <span>React</span>
+                <span>FastAPI</span>
+                <span>Python</span>
+                <span>MongoDB</span>
+                <span>ML</span>
+                <span>DL</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- TIC TAC TOE -->
+
+        <article class="project-card reveal">
+
+          <div class="project-number">
+            02
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-header">
+
+              <div>
+
+                <span class="project-category">
+                  ARTIFICIAL INTELLIGENCE
+                </span>
+
+                <h3>
+                  AI-Powered Tic Tac Toe
+                </h3>
+
+              </div>
+
+              <div class="project-icon">
+                <i class="fa-solid fa-gamepad"></i>
+              </div>
+
+            </div>
+
+
+            <p>
+
+              Developed a Tic Tac Toe game with an AI
+              opponent using the Minimax algorithm,
+              along with a graphical user interface.
+
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>Python</span>
+              <span>Tkinter</span>
+              <span>Minimax</span>
+
+            </div>
+
+
+            <a
+              href="https://github.com/Suhangini/Tic-Tac-Toe-AI"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View on GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- IMAGE CAPTIONING -->
+
+        <article class="project-card reveal">
+
+          <div class="project-number">
+            03
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-header">
+
+              <div>
+
+                <span class="project-category">
+                  DEEP LEARNING
+                </span>
+
+                <h3>
+                  Image Captioning System
+                </h3>
+
+              </div>
+
+              <div class="project-icon">
+                <i class="fa-solid fa-image"></i>
+              </div>
+
+            </div>
+
+
+            <p>
+
+              Implemented an image captioning system using
+              the BLIP model to automatically generate
+              descriptive captions for images.
+
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>Python</span>
+              <span>BLIP</span>
+              <span>Google Colab</span>
+
+            </div>
+
+
+            <a
+              href="https://github.com/Suhangini/Image-Captioning"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View on GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- IMAGE ORGANIZER -->
+
+        <article class="project-card reveal">
+
+          <div class="project-number">
+            04
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-header">
+
+              <div>
+
+                <span class="project-category">
+                  PYTHON · DATA TOOL
+                </span>
+
+                <h3>
+                  Image Organization & Compression Tool
+                </h3>
+
+              </div>
+
+              <div class="project-icon">
+                <i class="fa-solid fa-folder-tree"></i>
+              </div>
+
+            </div>
+
+
+            <p>
+
+              Developed a Python-based tool to organize,
+              rename, and compress image datasets while
+              generating structured processing summaries.
+
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>Python</span>
+              <span>Pillow</span>
+              <span>JSON</span>
+              <span>argparse</span>
+
+            </div>
+
+
+            <a
+              href="https://github.com/Suhangini/technical-assignment-image-organizer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View on GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- CHATBOT -->
+
+        <article class="project-card reveal">
+
+          <div class="project-number">
+            05
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-header">
+
+              <div>
+
+                <span class="project-category">
+                  ARTIFICIAL INTELLIGENCE
+                </span>
+
+                <h3>
+                  Rule-Based Chatbot
+                </h3>
+
+              </div>
+
+              <div class="project-icon">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+
+            </div>
+
+
+            <p>
+
+              Built a Python chatbot using keyword-based
+              logic to respond to user inputs and simulate
+              basic conversational behaviour.
+
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>Python</span>
+              <span>Rule-Based AI</span>
+
+            </div>
+
+
+            <a
+              href="https://github.com/Suhangini/Rule-Based-AI"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View on GitHub
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section contact-section" id="contact">
+
+      <div class="contact-card reveal">
+
+
+        <div class="contact-content">
+
+          <span class="section-kicker">
+            HAVE AN IDEA?
+          </span>
+
+
+          <h2>
+            Let's Connect
+          </h2>
+
+
+          <p>
+
+            Interested in AI, data, technology, or building
+            something meaningful? I'd love to connect.
+
+          </p>
+
+
+          <div class="contact-buttons">
+
+            <a
+              href="mailto:suhanginiumredkar@gmail.com"
+              class="btn btn-primary"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              Email Me
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/in/suhangini-umredkar-23b26032a"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-light"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+              LinkedIn
+            </a>
+
+
+            <a
+              href="https://github.com/Suhangini"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-light"
+            >
+              <i class="fa-brands fa-github"></i>
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-visual">
+
+          <div class="visual-grid"></div>
+
+          <div class="visual-node vn-one"></div>
+          <div class="visual-node vn-two"></div>
+          <div class="visual-node vn-three"></div>
+
+          <div class="visual-center">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
 
-    <p>
-      © 2026 Suhangini Umredkar
-    </p>
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        SU<span>.</span>
+      </div>
+
+
+      <p>
+        Building, learning & exploring with technology.
+      </p>
+
+
+      <div class="footer-links">
+
+        <a
+          href="mailto:suhanginiumredkar@gmail.com"
+          aria-label="Email"
+        >
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/suhangini-umredkar-23b26032a"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a
+          href="https://github.com/Suhangini"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Suhangini Umredkar. All rights reserved.
+    </div>
 
   </footer>
 
@@ -360,4 +1429,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
