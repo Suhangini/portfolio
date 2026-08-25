@@ -1,107 +1,113 @@
 /* =========================================================
    SUHANGINI UMREDKAR PORTFOLIO
-   INTERACTIONS
 ========================================================= */
 
 
-/* =========================
+/* =========================================================
    MOBILE NAVIGATION
-========================= */
+========================================================= */
 
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
 if (menuToggle && navMenu) {
 
   menuToggle.addEventListener("click", () => {
 
-    const isOpen =
-      navMenu.classList.toggle("open");
+    navMenu.classList.toggle("open");
 
-    menuToggle.setAttribute(
-      "aria-expanded",
-      isOpen
-    );
+    const icon = menuToggle.querySelector("i");
 
-    const icon =
-      menuToggle.querySelector("i");
+    if (navMenu.classList.contains("open")) {
 
-    if (icon) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
 
-      icon.classList.toggle(
-        "fa-bars",
-        !isOpen
-      );
+    } else {
 
-      icon.classList.toggle(
-        "fa-xmark",
-        isOpen
-      );
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
 
     }
-
-  });
-
-
-  /* Close menu after clicking */
-
-  navMenu.querySelectorAll("a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      navMenu.classList.remove("open");
-
-      menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      const icon =
-        menuToggle.querySelector("i");
-
-      if (icon) {
-
-        icon.classList.remove(
-          "fa-xmark"
-        );
-
-        icon.classList.add(
-          "fa-bars"
-        );
-
-      }
-
-    });
 
   });
 
 }
 
 
-/* =========================
+/* =========================================================
+   CLOSE MOBILE MENU
+========================================================= */
+
+document.querySelectorAll("#nav-menu a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    if (!navMenu) return;
+
+    navMenu.classList.remove("open");
+
+    const icon = menuToggle?.querySelector("i");
+
+    if (icon) {
+
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
+
+    }
+
+  });
+
+});
+
+
+/* =========================================================
+   SMOOTH SCROLL
+========================================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+  link.addEventListener("click", function (event) {
+
+    const targetId = this.getAttribute("href");
+
+    if (!targetId || targetId === "#") return;
+
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
+    event.preventDefault();
+
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  });
+
+});
+
+
+/* =========================================================
    SCROLL REVEAL
-========================= */
+========================================================= */
 
 const revealElements =
   document.querySelectorAll(".reveal");
 
-
 const revealObserver =
   new IntersectionObserver(
 
-    (entries, observer) => {
+    (entries) => {
 
       entries.forEach(entry => {
 
         if (entry.isIntersecting) {
 
-          entry.target.classList.add(
-            "show"
-          );
+          entry.target.classList.add("show");
 
-          observer.unobserve(
-            entry.target
-          );
+          revealObserver.unobserve(entry.target);
 
         }
 
@@ -115,7 +121,6 @@ const revealObserver =
 
   );
 
-
 revealElements.forEach(element => {
 
   revealObserver.observe(element);
@@ -123,28 +128,34 @@ revealElements.forEach(element => {
 });
 
 
-/* =========================
+/* =========================================================
    ACTIVE NAVIGATION
-========================= */
+========================================================= */
 
 const sections =
   document.querySelectorAll("section[id]");
 
 const navLinks =
-  document.querySelectorAll("#navMenu a");
-
+  document.querySelectorAll("#nav-menu a");
 
 function updateActiveNav() {
 
   let currentSection = "";
 
+  const scrollPosition =
+    window.scrollY + 180;
+
   sections.forEach(section => {
 
     const sectionTop =
-      section.offsetTop - 180;
+      section.offsetTop;
+
+    const sectionHeight =
+      section.offsetHeight;
 
     if (
-      window.scrollY >= sectionTop
+      scrollPosition >= sectionTop &&
+      scrollPosition < sectionTop + sectionHeight
     ) {
 
       currentSection =
@@ -153,7 +164,6 @@ function updateActiveNav() {
     }
 
   });
-
 
   navLinks.forEach(link => {
 
@@ -172,7 +182,6 @@ function updateActiveNav() {
 
 }
 
-
 window.addEventListener(
   "scroll",
   updateActiveNav
@@ -181,69 +190,57 @@ window.addEventListener(
 updateActiveNav();
 
 
-/* =========================
-   NAVBAR SCROLL EFFECT
-========================= */
+/* =========================================================
+   NAVBAR ON SCROLL
+========================================================= */
 
 const navbar =
   document.querySelector(".navbar");
 
+window.addEventListener("scroll", () => {
 
-window.addEventListener(
-  "scroll",
-  () => {
+  if (!navbar) return;
 
-    if (!navbar) return;
+  if (window.scrollY > 40) {
 
-    if (window.scrollY > 40) {
+    navbar.style.boxShadow =
+      "0 8px 30px rgba(72,82,74,0.08)";
 
-      navbar.style.boxShadow =
-        "0 10px 30px rgba(55,70,61,0.12)";
+  } else {
 
-    } else {
-
-      navbar.style.boxShadow =
-        "none";
-
-    }
+    navbar.style.boxShadow = "none";
 
   }
-);
+
+});
 
 
-/* =========================
-   PROFILE IMAGE CHECK
-========================= */
+/* =========================================================
+   PROFILE IMAGE FALLBACK
+========================================================= */
 
 const profileImage =
-  document.querySelector(
-    ".profile-image img"
-  );
-
+  document.querySelector(".profile-photo img");
 
 if (profileImage) {
 
-  profileImage.addEventListener(
-    "error",
-    () => {
+  profileImage.addEventListener("error", () => {
 
-      console.warn(
-        "Profile image could not be loaded. Check: assets/images/profile.jpeg"
-      );
+    console.warn(
+      "Profile image could not be loaded. Make sure the file exists at assets/images/profile.jpeg"
+    );
 
-    }
-  );
+  });
 
 }
 
 
-/* =========================
+/* =========================================================
    CURRENT YEAR
-========================= */
+========================================================= */
 
 const yearElement =
   document.getElementById("year");
-
 
 if (yearElement) {
 
@@ -253,43 +250,28 @@ if (yearElement) {
 }
 
 
-/* =========================
-   SMOOTH ANCHOR NAVIGATION
-========================= */
+/* =========================================================
+   BUTTON MICRO INTERACTION
+========================================================= */
 
-document.querySelectorAll(
-  'a[href^="#"]'
-).forEach(link => {
+document.querySelectorAll(".btn").forEach(button => {
 
-  link.addEventListener(
-    "click",
-    event => {
+  button.addEventListener("mouseenter", () => {
 
-      const targetId =
-        link.getAttribute("href");
+    button.style.transition =
+      "transform 0.2s ease";
 
-      if (
-        !targetId ||
-        targetId === "#"
-      ) {
-        return;
-      }
+  });
 
-      const target =
-        document.querySelector(
-          targetId
-        );
+});
 
-      if (!target) return;
 
-      event.preventDefault();
+/* =========================================================
+   PAGE LOAD
+========================================================= */
 
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+window.addEventListener("load", () => {
 
-    }
-  );
+  document.body.classList.add("loaded");
 
 });
